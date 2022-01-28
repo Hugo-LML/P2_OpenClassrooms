@@ -1,0 +1,940 @@
+/* /// ALL /// */
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0 50px;
+    font-family: 'raleway';
+}
+/* /// ALL /// */
+
+/* /// HEADER /// */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img
+{
+    transform: scale(0.5);
+    margin-left: -45.5px;
+}
+
+header nav
+{
+    display: flex;
+}
+
+header nav p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header nav p:first-child a, header nav p:nth-child(2) a
+{
+    position: relative;
+    transition: 0.3s;
+}
+
+header nav p:first-child a::before, header nav p:nth-child(2) a::before
+{
+    content: '';
+    position: absolute;
+    top: -37px;
+    left: -15%;
+    width: 125%;
+    height: 2px;
+    background-color: #0065FC;
+    transition: 0.3s;
+}
+
+header nav p:first-child a:hover, header nav p:nth-child(2) a:hover
+{
+    color: #0065FC;
+    transition: 0.3s;
+}
+
+header nav p:first-child a:hover::before, header nav p:nth-child(2) a:hover::before
+{
+    top: -35px;
+    transition: 0.3s;
+}
+
+@-moz-document url-prefix()
+{
+    header nav p:first-child a::before, header nav p:nth-child(2) a::before
+    {
+        top: -37.5px;
+    }
+    
+    header nav p:first-child a:hover::before, header nav p:nth-child(2) a:hover::before
+    {
+        top: -35.5px;
+    }
+}
+
+header nav > p:nth-child(2)
+{
+    margin-left: 50px;
+}
+
+header nav p a
+{
+    text-decoration: none;
+    color: black;
+}
+/* /// HEADER /// */
+
+/* /// SUB-HEADER /// */
+#slogan
+{
+    margin-bottom: 0;
+}
+
+#slogan + p
+{
+    margin-bottom: 30px;
+}
+
+#searchBar
+{
+    display: flex;
+}
+
+#searchBar div:first-child
+{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 0px 0px 12px;
+}
+
+#searchBar div:first-child i
+{
+    font-size: 20px;
+    padding: 14px;
+}
+
+#searchBar label
+{
+    border: 1px solid #F2F2F2;
+}
+
+#searchBar input
+{
+    font-weight: 700;
+    height: 100%;
+    border: none;
+    padding-left: 16px;
+}
+
+#searchBar input:focus
+{
+    outline: none;
+}
+
+#searchBar div:last-child
+{
+    background-color: #0065FC;
+    border-radius: 0px 12px 12px 0px;
+    cursor: pointer;
+}
+
+#searchBar div:last-child p
+{
+    margin: 0;
+    padding: 14px 14px;
+    font-weight: 700;
+    color: white;
+}
+
+#searchBar div:last-child i
+{
+    display: none;
+}
+
+#filters
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#filters .filter
+{
+    display: flex;
+    align-items: center;
+    margin: 30px 25px 0 0;
+    border: 2px solid #F2F2F2;
+    border-radius: 50px;
+    padding-right: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+#filters .filter::before
+{
+    content: '';
+    width: 0%;
+    height: 100%;
+    border-radius: 0 50px 50px 0;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    background-color: #0065FC;
+    z-index: -100;
+    transition: 0.6s;
+}
+
+#filters .filter:hover::before
+{
+    width: 90%;
+}
+
+#filters .filter:hover
+{
+    overflow: hidden;
+}
+
+#filters .filter:hover div
+{
+    background-color: #0065FC;
+}
+
+#filters .filter:hover div i, #filters .filter:hover h4
+{
+    color: #FFF;
+}
+
+#filters .filter div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: -2px 16px -2px -2px;
+    transition: 0.6s;
+}
+
+#filters .filter div i
+{
+    color: #0065FC;
+    font-size: 20px;
+    transition: 0.6s;
+}
+
+#filters .filter h4
+{
+    margin: 0;
+    transition: 0.6s;
+}
+
+#filters > h4
+{
+    margin: 30px 25px 0 0;
+}
+
+#info
+{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#info div
+{
+    border: 1px solid #F2F2F2;
+    border-radius: 50%;
+    min-width: 25px;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#info div i
+{
+    color: #0065FC;
+    font-size: 14px;
+}
+
+#info p
+{
+    margin: 0;
+}
+/* /// SUB-HEADER /// */
+
+/* /// FIRST SECTION /// */
+#firstSection
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* /// ACCOMMODATIONS MARSEILLE /// */
+#accommodationsMarseille
+{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 63.75%;
+    padding: 30px 30px 0px 30px;
+}
+
+#accommodationsMarseille h3
+{
+    margin: 0 0 20px 0;
+}
+
+#cardsMarseille
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#cardsMarseille a
+{
+    width: 31%;
+    min-height: 100%;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: initial;
+}
+
+#cardsMarseille a:hover .cardMarseille h4
+{
+    color: #0065FC;
+    transition: 0.3s;
+}
+
+.cardMarseille
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.containerImgMarseille
+{
+    display: flex;
+    justify-content: center;
+}
+
+.containerImgMarseille img
+{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 8px;
+}
+
+.infoCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 100px);
+}
+
+.infoCard p
+{
+    flex-grow: 2;
+}
+
+.cardMarseille h4, .cardMarseille p
+{
+    margin: 0 0 8px 8px;
+    transition: 0.3s;
+}
+
+.cardMarseille i
+{
+    font-size: 12px;
+    margin: 0 0 16px 0;
+    color: #F2F2F2;
+}
+
+.cardMarseille i:first-child
+{
+    margin-left: 8px;
+}
+
+#stars1 i:not(:last-child), #stars3 i:not(:last-child), #stars5 i:not(:last-child)
+{
+    color: #0065FC;
+}
+
+#stars2 i, #stars6 i
+{
+    color: #0065FC;
+}
+
+#stars4 i:not(:nth-child(4), :nth-child(5))
+{
+    color: #0065FC;
+}
+
+#showMore
+{
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#showMore:hover
+{
+    color: #0065FC;
+    transition: 0.3s;
+}
+/* /// ACCOMMODATIONS MARSEILLE /// */
+
+/* /// MOST POPULAR /// */
+#mostPopular
+{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 33.75%;
+    padding: 30px 30px 0px 30px;
+}
+
+#titleAndIcon
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+#titleAndIcon h3
+{
+    margin: 0;
+}
+
+#titleAndIcon i
+{
+    font-size: 24px;
+}
+
+#cardsPopular
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cardsPopular a
+{
+    width: 100%;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: initial;
+}
+
+#cardsPopular a:hover .textCardPopular h4
+{
+    color: #0065FC;
+    transition: 0.3s;
+}
+
+.cardPopular
+{
+    background-color: white;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    width: 100%;
+}
+
+.containerImgPopular
+{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-right: 16px;
+}
+
+.containerImgPopular img
+{
+    min-width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px 0px 0 16px;
+}
+
+.textCardPopular
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textCardPopular h4, .textCardPopular p
+{
+    margin: 10px 0 0 0;
+    transition: 0.3s;
+}
+
+.textCardPopular i
+{
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #F2F2F2;
+}
+
+#stars7 i
+{
+    color: #0065FC;
+}
+
+#stars8 i:not(:last-child), #stars9 i:not(:last-child)
+{
+    color: #0065FC;
+}
+/* /// MOST POPULAR /// */
+/* /// FIRST SECTION /// */
+
+/* /// SECOND SECTION /// */
+#secondSection
+{
+    margin-top: 60px;
+}
+
+#secondSection #activitiesMarseille
+{
+    margin: 0 0 30px 0;
+}
+
+#cardsActivities
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#cardsActivities a
+{
+    text-decoration: none;
+    color: initial;
+}
+
+#cardsActivities a:hover .cardActivities h4
+{
+    color: #0065FC;
+    transition: 0.3s;
+}
+
+#cardsActivities > a, #cardsActivities > div
+{
+    width: 22.5%;
+    height: 400px;
+}
+
+.cardActivities
+{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#secondCol, #fourthCol
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#secondCol a:first-child
+{
+    height: 55%;
+}
+
+#secondCol a:last-child
+{
+    height: 35%;
+}
+
+#fourthCol a:first-child
+{
+    height: 45%;
+}
+
+#fourthCol a:last-child
+{
+    height: 45%;
+}
+
+.cardActivities img
+{
+    width: 100%;
+    height: calc(100% - 50px);
+    object-fit: cover;
+}
+
+.cardActivities .nameActivities
+{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.cardActivities h4
+{
+    margin: 0 0 5px 10px;
+    transition: 0.3s;
+}
+/* /// SECOND SECTION /// */
+
+/* /// FOOTER /// */
+footer
+{
+    background-color: #F2F2F2;
+    margin: 60px -50px 0 -50px;
+    padding: 30px 0 30px 0;
+    display: flex;
+}
+
+footer div:first-child
+{
+    margin-left: 50px;
+}
+
+footer div
+{
+    margin-right: 15%;
+    white-space: nowrap;
+}
+
+footer p
+{
+    cursor: pointer;
+}
+/* /// FOOTER /// */
+
+/* /// MEDIA QUERIES /// */
+/* /// TABLET /// */
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    #firstSection
+    {
+        flex-direction: column;
+    }
+
+    #firstSection #accommodationsMarseille, #firstSection #mostPopular
+    {
+        width: 100%;
+    }
+
+    #firstSection #accommodationsMarseille
+    {
+        margin-bottom: 30px;
+    }
+
+    #cardsActivities > a, #cardsActivities > div
+    {
+        width: 45%;
+        height: 400px;
+    }
+
+    #cardsActivities > a:first-child, #cardsActivities > div:first-child
+    {
+        margin-bottom: 30px;
+    }
+
+    footer div
+    {
+        margin-right: 8%;
+    }
+}
+/* /// TABLET /// */
+
+/* /// MOBILE /// */
+@media screen and (max-width: 767px)
+{
+    body
+    {
+        margin: 0 25px;
+    }
+    
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img
+    {
+        margin-right: -69px;
+        margin-bottom: 10px;
+    }
+
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header nav p:first-child
+    {
+        margin-left: 20px;
+        transition: 0.3s;
+    }
+
+    header nav p:nth-child(2)
+    {
+        margin-right: 20px;
+        margin-left: 0;
+        transition: 0.3s;
+    }
+
+    header nav p:first-child a
+    {
+        color: #000;
+    }
+
+    header nav p:first-child a::before, header nav p:nth-child(2) a::before
+    {
+        display: none;
+    }
+
+    header #selectedBar
+    {
+        width: 100vw;
+        height: 2px;
+        background-color: #F2F2F2;
+        margin: 10px -25px 10px -25px;
+        position: relative;
+    }
+
+    header #selectedBar::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #0065FC;
+        transition: 0.3s;
+    }
+
+    header nav p:nth-child(2):hover + #selectedBar::before
+    {
+        left: 50%;
+        transition: 0.3s;
+    }
+
+    #slogan
+    {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    #slogan + p
+    {
+        margin-bottom: 30px;
+    }
+
+    #searchBar
+    {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #searchBar div:first-child i
+    {
+        font-size: 20px;
+    }
+
+    #searchBar div:last-child
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+
+    #searchBar div:last-child p
+    {
+        display: none;
+    }
+
+    #searchBar div:last-child i
+    {
+        display: initial;
+        color: white;
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    #searchBar label
+    {
+        border: 1px solid #F2F2F2;
+        margin-right: -10px;
+        flex-grow: 2;
+    }
+
+    #searchBar input
+    {
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    #filters .filter
+    {
+        margin: 10px 10px 0 0;
+    }
+
+    #filters > h4
+    {
+        margin: 30px 0 0 0;
+        flex-basis: 100%;
+    }
+
+    #info
+    {
+        align-items: flex-start;
+    }
+
+    #firstSection
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 30px -25px 0 -25px;
+    }
+
+    #mostPopular
+    {
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 25px 0 25px;
+    }
+
+    #titleAndIcon
+    {
+        margin: 0 0 30px 0;
+    }
+
+    #cardsPopular a
+    {
+        margin-bottom: 15px;
+    }
+
+    #cardsPopular a:last-child
+    {
+        margin-bottom: 30px;
+    }
+
+    #accommodationsMarseille
+    {
+        background-color: white;
+        border-radius: 0;
+        width: 100%;
+        padding: 30px 25px 0px 25px;
+    }
+
+    #accommodationsMarseille h3
+    {
+        margin: 0 0 30px 0;
+    }
+
+    #cardsMarseille a
+    {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #secondSection
+    {
+        margin-top: 30px;
+    }
+
+    #cardsActivities
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #cardsActivities a
+    {
+        margin-bottom: 15px;
+    }
+
+    #cardsActivities #fourthCol a:last-child
+    {
+        margin-bottom: 0;
+    }
+
+    #cardsActivities > a
+    {
+        width: 100%;
+        height: 200px;
+    }
+
+    #cardsActivities > div
+    {
+        width: 100%;
+        height: initial;
+    }
+
+    .cardActivities
+    {
+        height: 200px;
+    }
+
+    #secondCol, #fourthCol
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #secondCol a, #fourthCol a
+    {
+        height: 200px;
+    }
+
+    footer
+    {
+        margin: 60px -25px 0 -25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div:first-child
+    {
+        margin-left: 25px;
+    }
+
+    footer div:nth-child(2), footer div:last-child
+    {
+        margin-left: 25px;
+    }
+}
